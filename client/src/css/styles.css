@@ -1,0 +1,18 @@
+body {
+    background: rgb(07,99,36);
+}
+
+h1 {
+    font-weight: 700;
+    color:#222323;
+}
+
+hr {
+    border-color:#222323;
+}
+
+.playingCards .card {
+    height:4.6em;
+    width:3.3em;
+    font-size: 1.7em;
+}

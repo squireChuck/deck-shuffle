@@ -1,6 +1,6 @@
 var express = require('express');
 var bodyParser = require('body-parser');
-var apiController = require('./controllers/apiController');
+var apiController = require('deck-service').deckExpressRouter;
 
 var app = express(); // Construct an express app.
 var path = require('path');
@@ -27,10 +27,10 @@ app.use(function(req, res, next) {
 });
 
 // Puts the endpoints onto the Express app.
-apiController(app);
+app.use('/deckshuffle', apiController);
 
 // Similar to apiController - GET request to localhost:3000/app will serve the index.html 
-app.get('/app', function(req,res){
+app.get('/deckshuffle', function(req,res){
  res.sendFile(clientRootPath + '/index.html');
 });
 
