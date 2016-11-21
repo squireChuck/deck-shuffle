@@ -1,7 +1,7 @@
 {
-  "name": "node-express-skeleton",
+  "name": "deck-shuffle",
   "version": "1.0.0",
-  "description": "node/express skeleton",
+  "description": "Display and shuffle a 52 card deck.",
   "main": "app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -10,7 +10,7 @@
   "license": "ISC",
   "dependencies": {
     "body-parser": "^1.15.2",
-    "deck-service": "^1.0.1",
+    "deck-service": "^1.1.0",
     "express": "^4.14.0"
   }
 }

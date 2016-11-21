@@ -4,15 +4,41 @@ body {
 
 h1 {
     font-weight: 700;
-    color:#222323;
+    color: #222323;
 }
 
 hr {
-    border-color:#222323;
+    border-color: #222323;
 }
 
 .playingCards .card {
-    height:4.6em;
-    width:3.3em;
+    height: 4.6em;
+    width: 3.3em;
     font-size: 1.7em;
+}
+
+/* Fix sizing of suit icon */
+.playingCards.simpleCards .card .suit::after, 
+.playingCards .card.rank-j .suit::after, 
+.playingCards .card.rank-q .suit::after, 
+.playingCards .card.rank-k .suit::after, 
+.playingCards .card.rank-a .suit::after, 
+.playingCards .card.joker .rank::after {
+    font-size: 2.5em;
+    right: .09em;
+}
+
+#shuffleBtn {
+    background-color: #009733;
+    border-color: #007D2A;
+}
+
+#shuffleBtn:hover {
+    background-color: #007533;
+    border-color: #007D2A;
+}
+
+#shuffleBtn:active {
+    background-color: #004216;
+    border-color: #007D2A;
 }
