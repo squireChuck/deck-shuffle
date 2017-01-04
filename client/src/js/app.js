@@ -6,7 +6,9 @@ class Card extends React.Component {
         var suit = this.props.suit === "diamonds" ? "diams" : this.props.suit;
         var suitUnicodeEntity = "&" + suit + ";";
         var cardClass = "card rank-"+ this.props.rank.toLowerCase() + " " + suit;
-
+        
+        // Jshint doesn't work with jsx
+        /* jshint ignore:start */
         return (
             <div className="col-lg-1 col-sm-2 col-xs-3">
                 <div className={cardClass}>
@@ -16,6 +18,7 @@ class Card extends React.Component {
                 </div>
             </div>
         );
+        /* jshint ignore:end */
     }
 }
 
@@ -52,9 +55,12 @@ class ShuffleableCardArea extends React.Component {
             var cards = [];
 
             this.state.cards.forEach(function(card) {
+                /* jshint ignore:start */
                 cards.push(<Card suit={card.suit} rank={card.rank} />);
+                /* jshint ignore:end */
             });
-
+            
+            /* jshint ignore:start */
             return (
                 <div>
                     <div className="row btnRow">
@@ -70,12 +76,15 @@ class ShuffleableCardArea extends React.Component {
                     </div>
                 </div>
             );
+            /* jshint ignore:end */
 
         } else {
+            /* jshint ignore:start */
             return (
                 <div className="row playingCards simpleCards">
                 </div>
             );
+            /* jshint ignore:end */
         }
     }
 }
@@ -85,6 +94,7 @@ class ShuffleableCardArea extends React.Component {
  */
 class DeckHeader extends React.Component {
     render() {
+        /* jshint ignore:start */
         return (
             <div className="row">
             <div className="col-sm-12">
@@ -92,6 +102,7 @@ class DeckHeader extends React.Component {
             </div>
             </div>
         );
+        /* jshint ignore:end */
     }
 }
 
@@ -119,22 +130,27 @@ class ShuffleableCardApp extends React.Component {
     if (this.state.deck.cards) {
         var cards = this.state.deck.cards;
 
+        /* jshint ignore:start */
         return (
             <div className="container">
                 <DeckHeader name={this.state.deck.name} numberOfCards={cards.length} />
                 <ShuffleableCardArea cards={cards} /> 
             </div>
         );
+        /* jshint ignore:end */
     } else {
+        /* jshint ignore:start */
         return (
             <div className="container">
             </div>
         );
+        /* jshint ignore:end */
     }
   }
 }
-
+/* jshint ignore:start */
 ReactDOM.render(
   <ShuffleableCardApp url="/deckshuffle/api/v1/decks/Basic Deck" />,
   document.getElementById('container')
 );
+/* jshint ignore:end */

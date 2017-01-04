@@ -10,7 +10,7 @@
   "license": "ISC",
   "dependencies": {
     "body-parser": "^1.15.2",
-    "deck-service": "^1.1.0",
+    "deck-service": "^1.1.1",
     "express": "^4.14.0"
   }
 }
